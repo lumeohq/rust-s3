@@ -107,7 +107,7 @@ impl<'a> Request<'a> {
         url_str.push_str("/");
 
         if encode_path {
-            url_str.push_str(&signing::uri_encode(path, true));
+            url_str.push_str(&signing::uri_encode(path, false));
         } else {
             url_str.push_str(path);
         }
